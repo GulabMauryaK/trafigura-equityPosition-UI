@@ -1,0 +1,30 @@
+.transaction-card {
+  max-width: 600px; /* Constrain the width for desktop view */
+  margin: 30px auto; /* Center the card on the page */
+}
+
+.transaction-form-grid {
+  display: grid;
+  /* Two equal columns with a gap */
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px; /* Space between the grid items */
+  padding-top: 10px; /* Add a little space below the card title */
+}
+
+/* Ensure all form fields take up their allocated grid space */
+.full-width {
+  width: 100%;
+}
+
+/* Make the button stick to the right */
+mat-card-actions {
+    padding: 16px;
+}
+
+/* On smaller screens, stack the fields into one column */
+@media (max-width: 768px) {
+  .transaction-form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
